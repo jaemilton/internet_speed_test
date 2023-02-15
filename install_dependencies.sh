@@ -9,5 +9,4 @@ mv speedtest /usr/local/bin/
 pip3 install mysql-connector-python
 
 # create database and tables
-mysql -u root -p -e "CREATE DATABASE internet_speed_test"
-mysql -u root -p internet_speed_test < internet_speed_test.sql
+mysql -h mysql_localhost -u mysql_username -p mysql_password < database.sql
