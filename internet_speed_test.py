@@ -31,7 +31,7 @@ def persist_to_mysql(data, host, username, password, database_name):
     cursor = conn.cursor()
 
     # Insert data into 'speedtest_results' table
-    sql = "INSERT INTO results (datetime, download_speed, upload_speed, ping, server_id, server_name, hostname) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO speedtest_results (datetime, download_speed, upload_speed, ping, server_id, server_name, hostname) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     values = (data['timestamp'], data['download']['bandwidth'], data['upload']['bandwidth'], data['ping']['latency'], data['server']['id'], data['server']['name'], data['hostname'])
     cursor.execute(sql, values)
 

@@ -1,11 +1,11 @@
 -- create the database
-CREATE DATABASE internet_speed_test;
+CREATE DATABASE internet_monitor;
 
 -- switch to the new database
-USE internet_speed_test;
+USE internet_monitor;
 
 -- create the results table
-CREATE TABLE results (
+CREATE TABLE speedtest_results (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     datetime DATETIME NOT NULL,
     download_speed FLOAT NOT NULL,
