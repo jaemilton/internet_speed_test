@@ -48,9 +48,6 @@ def persist_to_mysql(data, host, username, password, database_name):
 # parse command line arguments
 parser = argparse.ArgumentParser(description="Check internet speed")
 parser.add_argument("-d", "--database", help="Persist results to a MySQL database", action="store_true")
-
-parser = argparse.ArgumentParser(description="Check internet speed")
-parser.add_argument("-d", "--database", help="Persist results to a MySQL database", action="store_true")
 parser.add_argument("--host", help="MySQL hostname")
 parser.add_argument("--user", help="MySQL username")
 parser.add_argument("--password", help="MySQL password")
@@ -76,4 +73,5 @@ if args.database:
                         database_name=args.database_name)
 elif args.csv:
     persist_to_csv(data=json_output, file_name=args.output_file)
-    
+
+#print("internet_speed_test finished.")
