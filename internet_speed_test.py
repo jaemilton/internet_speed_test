@@ -64,6 +64,8 @@ json_output = get_speedtest_data()
 json_output['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 json_output['hostname'] = socket.gethostname()
 
+print(json_output)
+
 # persist data to database or csv file
 if args.database:
     persist_to_mysql(data=json_output, 
@@ -74,4 +76,4 @@ if args.database:
 elif args.csv:
     persist_to_csv(data=json_output, file_name=args.output_file)
 
-#print("internet_speed_test finished.")
+print("internet_speed_test data persisted.")
