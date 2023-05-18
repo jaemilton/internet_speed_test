@@ -23,6 +23,6 @@ USERNAME=${!USR_VAR}
 PWD_VAR=PWD_${DATABASE^^}
 PASSWORD=${!PWD_VAR}
 
-python3.9 /root/git/internet_speed_test/internet_speed_test.py --database --host $MYSQLHOST --user $USERNAME --password $PASSWORD --database_name $DATABASE
+python3 /root/git/internet_speed_test/internet_speed_test.py --database --host $MYSQLHOST --user $USERNAME --password $PASSWORD --database_name $DATABASE
 
 eval "echo Elapsed time: $(date -ud "@$SECONDS" +'$((%s/3600/24)) days %H hr %M min %S sec')"
