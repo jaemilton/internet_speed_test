@@ -18,6 +18,7 @@ sudo apt-get install speedtest
 
 # install mysql connector
 pip3 install mysql-connector-python
+pip3  install cacheout
 
 ## create database and tables
 #mysql -h mysql_localhost -u mysql_username -p mysql_password < database.sql
