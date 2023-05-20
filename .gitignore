@@ -196,3 +196,5 @@ poetry.toml
 
 .vscode/launch.json
 *.csv
+.cached
+.cached_expire_times
