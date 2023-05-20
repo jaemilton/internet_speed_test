@@ -1,2 +1,2 @@
 mysql-connector-python
-cacheout==0.13.1
+cacheout==0.14.1
