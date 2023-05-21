@@ -94,9 +94,10 @@ class InternetSpeedTest(CacheUtil):
         return (id_monitor_host, ttl)
 
     def get_monitor_host_id(self) -> int: 
-        return self._get_cached_value(key=socket.gethostname(), 
+        fqdn = socket.getfqdn()
+        return self._get_cached_value(key=fqdn, 
                                         func_get_value=self.__get_monitor_host_id, 
-                                        hostname=socket.gethostname())
+                                        hostname=fqdn)
 
     def persist_to_mysql(self, data):
         
