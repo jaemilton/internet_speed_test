@@ -20,5 +20,11 @@ sudo apt-get install speedtest
 pip3 install mysql-connector-python
 pip3  install cacheout
 
+
+#install runnitor 
+wget https://github.com/bdd/runitor/releases/download/v1.2.0/runitor-v1.2.0-linux-arm64
+mv runitor-v1.2.0-linux-arm64 /opt
+cmkod +x /opt/runitor-v1.2.0-linux-arm64
+
 ## create database and tables
 #mysql -h mysql_localhost -u mysql_username -p mysql_password < database.sql
